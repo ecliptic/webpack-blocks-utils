@@ -1,6 +1,6 @@
 # webpack-blocks-utils
 
-Tiny helpers for [webpack-block](https://github.com/andywer/webpack-blocks).
+Tiny helpers for [webpack-blocks](https://github.com/andywer/webpack-blocks).
 
 [![JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 [![NPM Version](https://img.shields.io/npm/v/webpack-blocks-utils.svg)](https://www.npmjs.com/package/webpack-blocks-utils)
