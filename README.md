@@ -48,6 +48,10 @@ Sets [externals](https://webpack.github.io/docs/configuration.html#externals)
 
 Example usage:
 
+```js
+setExternals(['firebase', 'electron-debug', 'debug'])
+```
+
 ### envVar(key, value, configSetters)
 
 Applies an array of webpack blocks only if `process.env[key]` matches the given
