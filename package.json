@@ -1,0 +1,46 @@
+{
+  "name": "webpack-blocks-utils",
+  "version": "1.0.0",
+  "description": "Tiny webpack-blocks helpers",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "babel index.js -d lib",
+    "test": "jest",
+    "test-watch": "jest --watch",
+    "prepublish": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ecliptic/webpack-blocks-utils.git"
+  },
+  "author": "Brandon Konkle <brandon@ecliptic.io>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ecliptic/webpack-blocks-utils/issues"
+  },
+  "homepage": "https://github.com/ecliptic/webpack-blocks-utils#readme",
+  "devDependencies": {
+    "babel-cli": "^6.22.2",
+    "babel-eslint": "^7.1.1",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-transform-async-to-generator": "^6.22.0",
+    "babel-plugin-transform-class-properties": "^6.22.0",
+    "babel-plugin-transform-object-rest-spread": "^6.22.0",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-react": "^6.22.0",
+    "babel-preset-react-optimize": "^1.0.1",
+    "eslint": "^3.13.1",
+    "eslint-config-cleanjs": "^4.0.0",
+    "eslint-config-standard": "^6.2.1",
+    "eslint-config-standard-react": "^4.2.0",
+    "eslint-plugin-better": "^0.1.5",
+    "eslint-plugin-fp": "^2.3.0",
+    "eslint-plugin-import": "^1.16.0",
+    "eslint-plugin-promise": "^3.4.0",
+    "eslint-plugin-react": "^6.8.0",
+    "eslint-plugin-standard": "^2.0.1"
+  },
+  "dependencies": {
+    "@webpack-blocks/core": "^0.4.0"
+  }
+}
