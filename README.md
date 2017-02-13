@@ -1,45 +1,66 @@
-# webpack-blocks-html
+# webpack-blocks-utils
 
-A [webpack-block](https://github.com/andywer/webpack-blocks) for [html-webpack-plugin](https://github.com/jantimon/html-webpack-plugin).
+Tiny helpers for [webpack-block](https://github.com/andywer/webpack-blocks).
 
 [![JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
-[![NPM Version](https://img.shields.io/npm/v/webpack-blocks-html.svg)](https://www.npmjs.com/package/webpack-blocks-html)
+[![NPM Version](https://img.shields.io/npm/v/webpack-blocks-utils.svg)](https://www.npmjs.com/package/webpack-blocks-utils)
 
 ## Installation
 
 ```sh
-yarn add --dev webpack-blocks-html
+yarn add --dev webpack-blocks-utils
 ```
 
 or
 
 ```sh
-npm install --save-dev webpack-blocks-html
+npm install --save-dev webpack-blocks-utils
 ```
 
 ## Usage
 
-```js
-import {createConfig, entryPoint, setOutput} from '@webpack-blocks/webpack2'
-import babel from '@webpack-blocks/babel6'
-import html from './src/webpack-block-html'
+### setTarget(target)
 
-export default createConfig([
-  entryPoint(['babel-polyfill', './src/Main.js']),
-  setOutput('./build/bundle.js'),
-  babel(),
-  html({
-    filename: 'index.html',
-    template: 'assets/index.html',
-    showErrors: false,
-  }),
-])
+Sets [target](https://webpack.github.io/docs/configuration.html#target)
+
+Example usage:
+
+```js
+setTarget('electron-renderer')
 ```
 
-## Options
+### setNode(node)
 
-See the options list [here](https://github.com/jantimon/html-webpack-plugin#configuration).
+Sets [node](https://webpack.github.io/docs/configuration.html#node)
+
+Example usage:
+
+```js
+setNode({
+  __dirname: false,
+  __filename: false,
+})
+```
+
+### setExternals(externals)
+
+Sets [externals](https://webpack.github.io/docs/configuration.html#externals)
+
+Example usage:
+
+### envVar(key, value, configSetters)
+
+Applies an array of webpack blocks only if `process.env[key]` matches the given
+`value`.
+
+```js
+envVar('ELECTRON', 'true', [
+  setTarget('electron-main'),
+  setExternals(['firebase', 'electron-debug', 'debug']),
+  // ...
+]),
+```
 
 # License
 
-This project is licensed under [MIT](https://github.com/ecliptic/webpack-blocks-html/blob/master/LICENSE).
+This project is licensed under [MIT](https://github.com/ecliptic/webpack-blocks-utils/blob/master/LICENSE).
