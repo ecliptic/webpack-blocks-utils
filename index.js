@@ -26,3 +26,12 @@ export function envVar (key, targetValue, configSetters) {
     ? () => ({})
     : group(configSetters)
 }
+
+/**
+ * Sets `module.noParse`
+ */
+const noParse = expressions => () => ({
+  module: {
+    noParse: expressions,
+  },
+})

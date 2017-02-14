@@ -65,6 +65,19 @@ envVar('ELECTRON', 'true', [
 ]),
 ```
 
+### noParse(regexes)
+
+Sets [module.noParse](https://webpack.github.io/docs/configuration.html#module.noParse)
+
+Example usage:
+
+```js
+noParse([
+  // Don't parse localforage because it's pre-built
+  new RegExp('node_modules/localforage/dist/localforage.js'),
+]),
+```
+
 # License
 
 This project is licensed under [MIT](https://github.com/ecliptic/webpack-blocks-utils/blob/master/LICENSE).
