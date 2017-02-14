@@ -30,7 +30,7 @@ export function envVar (key, targetValue, configSetters) {
 /**
  * Sets `module.noParse`
  */
-const noParse = expressions => () => ({
+export const noParse = expressions => () => ({
   module: {
     noParse: expressions,
   },
