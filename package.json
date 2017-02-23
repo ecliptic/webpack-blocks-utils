@@ -18,6 +18,10 @@
   "bugs": {
     "url": "https://github.com/ecliptic/webpack-blocks-utils/issues"
   },
+  "keywords": [
+    "webpack",
+    "webpack-blocks"
+  ],
   "homepage": "https://github.com/ecliptic/webpack-blocks-utils#readme",
   "devDependencies": {
     "babel-cli": "^6.22.2",
