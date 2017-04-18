@@ -35,3 +35,10 @@ export const noParse = expressions => () => ({
     noParse: expressions,
   },
 })
+
+/**
+ * Sets `resolve.modules`
+ */
+export const resolveModules = modules => () => ({
+  resolve: {modules},
+})
