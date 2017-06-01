@@ -61,7 +61,7 @@
   },
   "lint-staged": {
     "*.js": [
-      "yarn run format",
+      "yarn format",
       "git add"
     ]
   }
