@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`html() multiple definitions 1`] = `
+Object {
+  "html": Object {
+    "filename": "index.html",
+    "showErrors": true,
+    "template": "templates/index.html",
+  },
+}
+`;
+
+exports[`html() single definition 1`] = `
+Object {
+  "html": Object {
+    "filename": "index.html",
+    "showErrors": false,
+    "template": "assets/index.html",
+  },
+}
+`;
