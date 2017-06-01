@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snippets noParse() 1`] = `
+Object {
+  "module": Object {
+    "noParse": /node_modules/,
+  },
+}
+`;
+
+exports[`snippets resolveModules() 1`] = `
+Object {
+  "resolve": Object {
+    "modules": Array [
+      "node_modules",
+      "src",
+    ],
+  },
+}
+`;
+
+exports[`snippets setExternals() 1`] = `
+Object {
+  "externals": Array [
+    "debug",
+  ],
+}
+`;
+
+exports[`snippets setNode() 1`] = `
+Object {
+  "node": Object {
+    "console": false,
+  },
+}
+`;
+
+exports[`snippets setTarget() 1`] = `
+Object {
+  "target": "electron-renderer",
+}
+`;

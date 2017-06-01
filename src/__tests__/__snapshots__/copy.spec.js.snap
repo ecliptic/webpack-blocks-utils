@@ -1,0 +1,84 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`copy copy() from and to 1`] = `
+Object {
+  "copyPlugin": Object {
+    "patterns": Array [
+      Object {
+        "from": "assets/robots.txt",
+        "to": "public/assets/robots.txt",
+      },
+    ],
+  },
+}
+`;
+
+exports[`copy copy() from only 1`] = `
+Object {
+  "copyPlugin": Object {
+    "patterns": Array [
+      Object {
+        "from": "assets/robots.txt",
+        "to": undefined,
+      },
+    ],
+  },
+}
+`;
+
+exports[`copy copy() multiple definitions 1`] = `
+Object {
+  "copyPlugin": Object {
+    "patterns": Array [
+      Object {
+        "from": "assets/not-robots.txt",
+        "to": undefined,
+      },
+      Object {
+        "from": "assets/robots.txt",
+        "to": "public/assets/robots.txt",
+      },
+    ],
+  },
+}
+`;
+
+exports[`copy copyOptions() 1`] = `
+Object {
+  "copyPlugin": Object {
+    "options": Object {
+      "debug": "warning",
+    },
+  },
+}
+`;
+
+exports[`copy copyPattern() multiple patterns 1`] = `
+Object {
+  "copyPlugin": Object {
+    "patterns": Array [
+      Object {
+        "from": "first",
+        "to": "row",
+      },
+      Object {
+        "from": "second",
+        "to": "row",
+      },
+    ],
+  },
+}
+`;
+
+exports[`copy copyPattern() one pattern 1`] = `
+Object {
+  "copyPlugin": Object {
+    "patterns": Array [
+      Object {
+        "from": "test",
+        "to": "target",
+      },
+    ],
+  },
+}
+`;

@@ -1,16 +1,13 @@
-{
-  "extends": ["cleanjs", "standard", "standard-react"],
-  "parser": "babel-eslint",
-  "rules": {
-    "jsx-quotes": ["error", "prefer-double"],
-    "comma-dangle": ["error", "always-multiline"],
-    "react/prop-types": "off",
-  },
-  "env": {
-    "jest": true,
-  },
-  "globals": {
-    "__PREFIX_LINKS__": true,
-    "__DEV__": true
-  }
-}
+extends:
+  - plugin:flowtype/recommended
+  - standard-react
+  - standard
+parser: babel-eslint
+plugins:
+  - flowtype
+rules:
+  jsx-quotes: [error, prefer-double]
+  comma-dangle: [error, always-multiline]
+  object-curly-spacing: [error, never]
+env:
+  jest: true

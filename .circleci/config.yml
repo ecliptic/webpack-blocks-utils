@@ -1,0 +1,16 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: node:latest
+    working_directory: ~/webpack-blocks-utils
+    steps:
+      - checkout
+      - restore_cache:
+          key: webpack-blocks-utils-{{ .Branch }}-{{ checksum "package.json" }}-{{ checksum "yarn.lock" }}
+      - run: yarn install
+      - save_cache:
+          paths:
+            - ~/.cache/yarn
+          key: webpack-blocks-utils-{{ .Branch }}-{{ checksum "package.json" }}-{{ checksum "yarn.lock" }}
+      - run: yarn test
