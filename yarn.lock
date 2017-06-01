@@ -2,10 +2,11 @@
 # yarn lockfile v1
 
 
-"@webpack-blocks/core@^0.4.0":
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/@webpack-blocks/core/-/core-0.4.0.tgz#a9225cdaafec06576713a552cd78e0ee054828a9"
+"@webpack-blocks/core@next":
+  version "1.0.0-alpha.1"
+  resolved "https://registry.yarnpkg.com/@webpack-blocks/core/-/core-1.0.0-alpha.1.tgz#c5705d3a8e90613ed76f63b7881d43dc65036a3a"
   dependencies:
+    lodash "^4.17.4"
     webpack-merge "^2.3.1"
 
 abab@^1.0.3:
