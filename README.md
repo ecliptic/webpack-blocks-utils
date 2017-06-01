@@ -93,7 +93,7 @@ The most basic way to use the plugin is to import `copy` and use it to define si
 ```js
 import {createConfig, entryPoint, setOutput} from '@webpack-blocks/webpack2'
 import babel from '@webpack-blocks/babel6'
-import {copy} from './src/webpack-block-copy'
+import {copy} from 'webpack-blocks-utils'
 
 export default createConfig([
   entryPoint(['babel-polyfill', './src/Main.js']),
@@ -119,7 +119,7 @@ If you need to use more advanced patterns, described [here](https://github.com/k
 
 ```js
 import {createConfig} from '@webpack-blocks/webpack2'
-import {copyPattern} from './src/webpack-block-copy'
+import {copyPattern} from 'webpack-blocks-utils'
 
 export default createConfig([
   copyPattern({
@@ -136,7 +136,7 @@ If you need to set options, use the `copyOptions` function:
 
 ```js
 import {createConfig} from '@webpack-blocks/webpack2'
-import {copyOptions} from './src/webpack-block-copy'
+import {copyOptions} from 'webpack-blocks-utils'
 
 export default createConfig([
   copyOptions({copyUnmodified: true}),
