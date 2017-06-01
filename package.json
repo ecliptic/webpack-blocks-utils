@@ -4,7 +4,7 @@
   "description": "Tiny webpack-blocks helpers",
   "main": "lib/index.js",
   "scripts": {
-    "build": "babel src -d lib",
+    "build": "babel src -d lib --ignore __tests__,types.js",
     "test": "jest",
     "test-watch": "jest --watch",
     "prepublish": "yarn build",
