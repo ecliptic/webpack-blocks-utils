@@ -9,7 +9,7 @@
     "test-watch": "jest --watch",
     "prepublish": "yarn build",
     "precommit": "lint-staged",
-    "format": "prettier-eslint --write \"packages/*/src/**/*.js\""
+    "format": "prettier-eslint --write \"src/**/*.js\""
   },
   "repository": {
     "type": "git",
