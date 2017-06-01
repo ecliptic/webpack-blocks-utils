@@ -84,7 +84,7 @@ noParse([
 ]),
 ```
 
-## Copy
+## Copy Plugin
 
 The `copy`, `copyPattern`, and `copyOptions` blocks wrap [copy-webpack-plugin](https://github.com/kevlened/copy-webpack-plugin).
 
@@ -144,6 +144,31 @@ export default createConfig([
 ```
 
 See the options list [here](https://github.com/kevlened/copy-webpack-plugin#available-options).
+
+## Html Plugin
+
+```js
+import {createConfig, entryPoint, setOutput} from '@webpack-blocks/webpack2'
+import babel from '@webpack-blocks/babel6'
+import html from './src/webpack-block-html'
+
+export default createConfig([
+  entryPoint(['babel-polyfill', './src/Main.js']),
+  setOutput('./build/bundle.js'),
+  babel(),
+  html({template: 'assets/index.html'}),
+])
+```
+
+## Options
+
+See the options list [here](https://github.com/jantimon/html-webpack-plugin#configuration).
+
+Defaults:
+
+* *filename:* 'index.html'
+* *template:* 'templates/index.html'
+* *showErrors:* false
 
 # License
 
