@@ -9,7 +9,7 @@
     "test-watch": "jest --watch",
     "prepublish": "yarn build",
     "precommit": "lint-staged",
-    "format": "prettier-eslint --write \"src/**/*.js\""
+    "format": "prettier-eslint --write"
   },
   "repository": {
     "type": "git",
@@ -60,7 +60,7 @@
     "copy-webpack-plugin": "^4.0.1"
   },
   "lint-staged": {
-    "*.js": [
+    "src/**/*.js": [
       "yarn format",
       "git add"
     ]
