@@ -10,7 +10,7 @@ describe('html()', () => {
     }
 
     const intermediateConfig = block(context, helpers)({})
-    block.post(context, helpers)(intermediateConfig)
+    if (block.post) block.post(context, helpers)(intermediateConfig)
 
     expect(context).toMatchSnapshot()
   })
@@ -28,7 +28,7 @@ describe('html()', () => {
 
     const block = html({template: 'templates/index.html'})
     const intermediateConfig = block(context, helpers)({})
-    block.post(context, helpers)(intermediateConfig)
+    if (block.post) block.post(context, helpers)(intermediateConfig)
 
     expect(context).toMatchSnapshot()
   })

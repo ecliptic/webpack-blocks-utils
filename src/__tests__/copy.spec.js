@@ -14,7 +14,7 @@ describe('copy', () => {
       }
 
       const intermediateConfig = block(context, helpers)({})
-      block.post(context, helpers)(intermediateConfig)
+      if (block.post) block.post(context, helpers)(intermediateConfig)
 
       expect(context).toMatchSnapshot()
     })
@@ -30,7 +30,7 @@ describe('copy', () => {
       }
 
       const intermediateConfig = block(context, helpers)({})
-      block.post(context, helpers)(intermediateConfig)
+      if (block.post) block.post(context, helpers)(intermediateConfig)
 
       expect(context).toMatchSnapshot()
     })
@@ -51,7 +51,7 @@ describe('copy', () => {
       const block = copy('assets/robots.txt', 'public/assets/robots.txt')
       const intermediateConfig = block(context, helpers)({})
 
-      block.post(context, helpers)(intermediateConfig)
+      if (block.post) block.post(context, helpers)(intermediateConfig)
 
       expect(context).toMatchSnapshot()
     })
@@ -69,7 +69,7 @@ describe('copy', () => {
       }
 
       const intermediateConfig = block(context, helpers)({})
-      block.post(context, helpers)(intermediateConfig)
+      if (block.post) block.post(context, helpers)(intermediateConfig)
 
       expect(context).toMatchSnapshot()
     })
@@ -87,7 +87,7 @@ describe('copy', () => {
 
       const block = copyPattern({from: 'second', to: 'row'})
       const intermediateConfig = block(context, helpers)({})
-      block.post(context, helpers)(intermediateConfig)
+      if (block.post) block.post(context, helpers)(intermediateConfig)
 
       expect(context).toMatchSnapshot()
     })
@@ -104,7 +104,7 @@ describe('copy', () => {
     }
 
     const intermediateConfig = block(context, helpers)({})
-    block.post(context, helpers)(intermediateConfig)
+    if (block.post) block.post(context, helpers)(intermediateConfig)
 
     expect(context).toMatchSnapshot()
   })

@@ -33,8 +33,3 @@ bower_components
 
 # Local environment variables
 .env
-
-# Build directories
-build
-dist
-release

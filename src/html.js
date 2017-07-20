@@ -9,7 +9,7 @@ import deepmerge from 'deepmerge'
 
 import type {Block, Helpers, Config} from './types'
 
-export function html (options): Block {
+export function html (options: *): Block {
   return Object.assign(
     context => prevConfig => {
       const defaultOpts = {
