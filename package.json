@@ -1,6 +1,6 @@
 {
   "name": "webpack-blocks-utils",
-  "version": "2.0.0-alpha.3",
+  "version": "2.0.0-alpha.4",
   "description": "Tiny webpack-blocks helpers",
   "main": "lib/index.js",
   "scripts": {
